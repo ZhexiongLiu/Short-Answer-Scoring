@@ -42,7 +42,7 @@ class BatchGeneration:
 
         with open("config.yml", "r") as f:
             config = yaml.safe_load(f)
-        api_key = config["api_key"]
+        api_key = config["openai_api_key"]
 
         self.client = AsyncAzureOpenAI(
             api_key=api_key,
