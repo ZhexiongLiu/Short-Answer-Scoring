@@ -1,0 +1,30 @@
+2026-03-21 21:39:28,591 [INFO] Running async evaluator with batching
+2026-03-21 21:39:30,483 [INFO] Finished batch 1/14 — 60/827 prompts
+2026-03-21 21:39:32,263 [INFO] Finished batch 2/14 — 120/827 prompts
+2026-03-21 21:39:34,507 [INFO] Finished batch 3/14 — 180/827 prompts
+2026-03-21 21:39:36,565 [INFO] Finished batch 4/14 — 240/827 prompts
+2026-03-21 21:39:38,275 [INFO] Finished batch 5/14 — 300/827 prompts
+2026-03-21 21:39:40,075 [INFO] Finished batch 6/14 — 360/827 prompts
+2026-03-21 21:39:41,674 [INFO] Finished batch 7/14 — 420/827 prompts
+2026-03-21 21:39:43,391 [INFO] Finished batch 8/14 — 480/827 prompts
+2026-03-21 21:39:45,048 [INFO] Finished batch 9/14 — 540/827 prompts
+2026-03-21 21:39:46,959 [INFO] Finished batch 10/14 — 600/827 prompts
+2026-03-21 21:39:48,456 [INFO] Finished batch 11/14 — 660/827 prompts
+2026-03-21 21:39:53,762 [INFO] Finished batch 12/14 — 720/827 prompts
+2026-03-21 21:39:55,817 [INFO] Finished batch 13/14 — 780/827 prompts
+2026-03-21 21:39:58,198 [INFO] Finished batch 14/14 — 827/827 prompts
+         score pred_score
+0    Incorrect    Correct
+1      Correct    Correct
+2      Correct    Correct
+3    Incorrect  Incorrect
+4      Correct    Correct
+..         ...        ...
+822    Correct    Correct
+823    Correct    Correct
+824  Incorrect  Incorrect
+825  Incorrect    Correct
+826  Incorrect  Incorrect
+
+[827 rows x 2 columns]
+Precision: 0.7621 | Recall: 0.7557 | F1: 0.7587 | WQK: 0.5175

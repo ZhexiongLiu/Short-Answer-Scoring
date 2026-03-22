@@ -1,0 +1,34 @@
+2026-03-21 21:40:47,026 [INFO] Running async evaluator with batching
+2026-03-21 21:40:49,098 [INFO] Finished batch 1/14 — 60/827 prompts
+2026-03-21 21:40:56,847 [INFO] Finished batch 2/14 — 120/827 prompts
+2026-03-21 21:40:59,817 [INFO] Finished batch 3/14 — 180/827 prompts
+2026-03-21 21:41:02,690 [INFO] Finished batch 4/14 — 240/827 prompts
+2026-03-21 21:41:05,673 [INFO] Finished batch 5/14 — 300/827 prompts
+2026-03-21 21:41:09,749 [INFO] Finished batch 6/14 — 360/827 prompts
+2026-03-21 21:41:10,679 [INFO] OpenAI request failed: Error code: 400 - {'error': {'message': "The response was filtered due to the prompt triggering Azure OpenAI's content management policy. Please modify your prompt and retry. To learn more about our content filtering policies please read our documentation: https://go.microsoft.com/fwlink/?linkid=2198766", 'type': None, 'param': 'prompt', 'code': 'content_filter', 'status': 400, 'innererror': {'code': 'ResponsibleAIPolicyViolation', 'content_filter_result': {'hate': {'filtered': False, 'severity': 'safe'}, 'self_harm': {'filtered': False, 'severity': 'safe'}, 'sexual': {'filtered': True, 'severity': 'medium'}, 'violence': {'filtered': False, 'severity': 'safe'}}}}}
+2026-03-21 21:41:11,234 [INFO] Finished batch 7/14 — 420/827 prompts
+2026-03-21 21:41:15,344 [INFO] Finished batch 8/14 — 480/827 prompts
+2026-03-21 21:41:18,550 [INFO] Finished batch 9/14 — 540/827 prompts
+2026-03-21 21:41:20,130 [INFO] Finished batch 10/14 — 600/827 prompts
+2026-03-21 21:41:20,877 [INFO] OpenAI request failed: Error code: 400 - {'error': {'message': "The response was filtered due to the prompt triggering Azure OpenAI's content management policy. Please modify your prompt and retry. To learn more about our content filtering policies please read our documentation: https://go.microsoft.com/fwlink/?linkid=2198766", 'type': None, 'param': 'prompt', 'code': 'content_filter', 'status': 400, 'innererror': {'code': 'ResponsibleAIPolicyViolation', 'content_filter_result': {'hate': {'filtered': False, 'severity': 'safe'}, 'self_harm': {'filtered': False, 'severity': 'safe'}, 'sexual': {'filtered': True, 'severity': 'medium'}, 'violence': {'filtered': False, 'severity': 'safe'}}}}}
+2026-03-21 21:41:22,032 [INFO] Finished batch 11/14 — 660/827 prompts
+2026-03-21 21:41:24,385 [INFO] Finished batch 12/14 — 720/827 prompts
+2026-03-21 21:41:26,641 [INFO] Finished batch 13/14 — 780/827 prompts
+2026-03-21 21:41:28,085 [INFO] Finished batch 14/14 — 827/827 prompts
+2026-03-21 21:41:28,115 [INFO] Unrecognized score format: 0
+2026-03-21 21:41:28,115 [INFO] Unrecognized score format: 0
+         score pred_score
+0    Incorrect    Correct
+1      Correct  Incorrect
+2      Correct  Incorrect
+3    Incorrect  Incorrect
+4      Correct    Correct
+..         ...        ...
+822    Correct    Correct
+823    Correct    Correct
+824  Incorrect  Incorrect
+825  Incorrect    Correct
+826  Incorrect  Incorrect
+
+[827 rows x 2 columns]
+Precision: 0.7427 | Recall: 0.7374 | F1: 0.7399 | WQK: 0.4799
