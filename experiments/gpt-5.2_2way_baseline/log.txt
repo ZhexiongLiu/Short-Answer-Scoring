@@ -1,4 +1,44 @@
-2026-03-22 16:46:47,163 [INFO] Running async evaluator with batching
-2026-03-22 16:46:48,955 [INFO] Finished batch 1/14 — 60/827 prompts
-2026-03-22 16:46:50,854 [INFO] Finished batch 2/14 — 120/827 prompts
-2026-03-22 16:46:52,400 [INFO] Finished batch 3/14 — 180/827 prompts
+2026-03-22 17:21:45,813 [INFO] Running async evaluator with batching
+2026-03-22 17:22:02,480 [INFO] Finished batch 1/14 — 60/827 prompts
+2026-03-22 17:22:06,197 [INFO] Finished batch 2/14 — 120/827 prompts
+2026-03-22 17:22:09,204 [INFO] Finished batch 3/14 — 180/827 prompts
+2026-03-22 17:22:12,663 [INFO] Finished batch 4/14 — 240/827 prompts
+2026-03-22 17:22:15,071 [INFO] Finished batch 5/14 — 300/827 prompts
+2026-03-22 17:22:18,087 [INFO] Finished batch 6/14 — 360/827 prompts
+2026-03-22 17:22:19,388 [INFO] OpenAI request failed: Error code: 400 - {'error': {'message': "The response was filtered due to the prompt triggering Azure OpenAI's content management policy. Please modify your prompt and retry. To learn more about our content filtering policies please read our documentation: https://go.microsoft.com/fwlink/?linkid=2198766", 'type': None, 'param': 'prompt', 'code': 'content_filter', 'status': 400, 'innererror': {'code': 'ResponsibleAIPolicyViolation', 'content_filter_result': {'hate': {'filtered': False, 'severity': 'safe'}, 'self_harm': {'filtered': False, 'severity': 'safe'}, 'sexual': {'filtered': True, 'severity': 'medium'}, 'violence': {'filtered': False, 'severity': 'safe'}}}}}
+2026-03-22 17:22:21,343 [INFO] Finished batch 7/14 — 420/827 prompts
+2026-03-22 17:22:24,786 [INFO] Finished batch 8/14 — 480/827 prompts
+2026-03-22 17:22:27,840 [INFO] Finished batch 9/14 — 540/827 prompts
+2026-03-22 17:22:30,586 [INFO] Finished batch 10/14 — 600/827 prompts
+2026-03-22 17:22:31,419 [INFO] OpenAI request failed: Error code: 400 - {'error': {'message': "The response was filtered due to the prompt triggering Azure OpenAI's content management policy. Please modify your prompt and retry. To learn more about our content filtering policies please read our documentation: https://go.microsoft.com/fwlink/?linkid=2198766", 'type': None, 'param': 'prompt', 'code': 'content_filter', 'status': 400, 'innererror': {'code': 'ResponsibleAIPolicyViolation', 'content_filter_result': {'hate': {'filtered': False, 'severity': 'safe'}, 'self_harm': {'filtered': False, 'severity': 'safe'}, 'sexual': {'filtered': True, 'severity': 'medium'}, 'violence': {'filtered': False, 'severity': 'safe'}}}}}
+2026-03-22 17:22:35,188 [INFO] Finished batch 11/14 — 660/827 prompts
+2026-03-22 17:22:36,860 [INFO] Finished batch 12/14 — 720/827 prompts
+2026-03-22 17:22:40,717 [INFO] Finished batch 13/14 — 780/827 prompts
+2026-03-22 17:22:43,278 [INFO] Finished batch 14/14 — 827/827 prompts
+2026-03-22 17:22:43,309 [INFO] Unrecognized score format: 0
+2026-03-22 17:22:43,309 [INFO] Unrecognized score format: 0
+         score pred_score
+0    Incorrect    Correct
+1      Correct  Incorrect
+2      Correct  Incorrect
+3    Incorrect  Incorrect
+4      Correct    Correct
+..         ...        ...
+822    Correct    Correct
+823    Correct    Correct
+824  Incorrect  Incorrect
+825  Incorrect    Correct
+826  Incorrect  Incorrect
+
+[827 rows x 2 columns]
+Precision: 0.7412 | Recall: 0.7377 | F1: 0.7394 | WQK: 0.4789 
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.84      0.85      0.85       583
+           1       0.64      0.62      0.63       244
+
+    accuracy                           0.78       827
+   macro avg       0.74      0.74      0.74       827
+weighted avg       0.78      0.78      0.78       827
+

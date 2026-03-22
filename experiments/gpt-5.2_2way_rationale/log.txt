@@ -1,32 +1,40 @@
-2026-03-22 16:45:39,722 [INFO] Running async evaluator with batching
-2026-03-22 16:45:43,298 [INFO] Finished batch 1/14 — 60/827 prompts
-2026-03-22 16:45:46,853 [INFO] Finished batch 2/14 — 120/827 prompts
-2026-03-22 16:45:50,959 [INFO] Finished batch 3/14 — 180/827 prompts
-2026-03-22 16:45:54,543 [INFO] Finished batch 4/14 — 240/827 prompts
-2026-03-22 16:45:59,703 [INFO] Finished batch 5/14 — 300/827 prompts
-2026-03-22 16:46:05,638 [INFO] Finished batch 6/14 — 360/827 prompts
-2026-03-22 16:46:07,824 [INFO] OpenAI request failed: Error code: 400 - {'error': {'message': "The response was filtered due to the prompt triggering Azure OpenAI's content management policy. Please modify your prompt and retry. To learn more about our content filtering policies please read our documentation: https://go.microsoft.com/fwlink/?linkid=2198766", 'type': None, 'param': 'prompt', 'code': 'content_filter', 'status': 400, 'innererror': {'code': 'ResponsibleAIPolicyViolation', 'content_filter_result': {'hate': {'filtered': False, 'severity': 'safe'}, 'self_harm': {'filtered': False, 'severity': 'safe'}, 'sexual': {'filtered': True, 'severity': 'medium'}, 'violence': {'filtered': False, 'severity': 'safe'}}}}}
-2026-03-22 16:46:10,724 [INFO] Finished batch 7/14 — 420/827 prompts
-2026-03-22 16:46:14,150 [INFO] Finished batch 8/14 — 480/827 prompts
-2026-03-22 16:46:18,868 [INFO] Finished batch 9/14 — 540/827 prompts
-2026-03-22 16:46:22,951 [INFO] Finished batch 10/14 — 600/827 prompts
-2026-03-22 16:46:26,639 [INFO] Finished batch 11/14 — 660/827 prompts
-2026-03-22 16:46:37,269 [INFO] Finished batch 12/14 — 720/827 prompts
-2026-03-22 16:46:42,276 [INFO] Finished batch 13/14 — 780/827 prompts
-2026-03-22 16:46:45,656 [INFO] Finished batch 14/14 — 827/827 prompts
-2026-03-22 16:46:45,677 [INFO] Unrecognized score format: 0
-         score                                         pred_score
-0    Incorrect  [Incorrect]\n\n### Rationale:\nDie Antwort nen...
-1      Correct  ### Response:\nIncorrect\n\n### Rationale:\nDi...
-2      Correct  ### Response:\nIncorrect\n\n### Rationale:\nDi...
-3    Incorrect  ### Response:\nIncorrect\n\n### Rationale:\nDi...
-4      Correct  [Correct]\n\n### Rationale:\nDie Antwort beurt...
-..         ...                                                ...
-822    Correct  ### Response:\nCorrect\n\n### Rationale:\nDie ...
-823    Correct  ### Response:\nCorrect\n\n### Rationale:\nDie ...
-824  Incorrect  ### Response:\nIncorrect\n\n### Rationale:\nDi...
-825  Incorrect  ### Response:\nCorrect\n\n### Rationale:\nDie ...
-826  Incorrect  ### Response:\nIncorrect\n\n### Rationale:\nDi...
+2026-03-22 17:22:44,775 [INFO] Running async evaluator with batching
+2026-03-22 17:22:51,490 [INFO] Finished batch 1/14 — 60/827 prompts
+2026-03-22 17:22:54,179 [INFO] Finished batch 2/14 — 120/827 prompts
+2026-03-22 17:22:57,929 [INFO] Finished batch 3/14 — 180/827 prompts
+2026-03-22 17:23:01,340 [INFO] Finished batch 4/14 — 240/827 prompts
+2026-03-22 17:23:04,376 [INFO] Finished batch 5/14 — 300/827 prompts
+2026-03-22 17:23:09,493 [INFO] Finished batch 6/14 — 360/827 prompts
+2026-03-22 17:23:13,323 [INFO] Finished batch 7/14 — 420/827 prompts
+2026-03-22 17:23:16,864 [INFO] Finished batch 8/14 — 480/827 prompts
+2026-03-22 17:23:19,742 [INFO] Finished batch 9/14 — 540/827 prompts
+2026-03-22 17:23:22,908 [INFO] Finished batch 10/14 — 600/827 prompts
+2026-03-22 17:23:26,882 [INFO] Finished batch 11/14 — 660/827 prompts
+2026-03-22 17:23:29,406 [INFO] Finished batch 12/14 — 720/827 prompts
+2026-03-22 17:23:32,353 [INFO] Finished batch 13/14 — 780/827 prompts
+2026-03-22 17:23:39,959 [INFO] Finished batch 14/14 — 827/827 prompts
+         score pred_score
+0    Incorrect    Correct
+1      Correct    Correct
+2      Correct  Incorrect
+3    Incorrect  Incorrect
+4      Correct    Correct
+..         ...        ...
+822    Correct    Correct
+823    Correct    Correct
+824  Incorrect  Incorrect
+825  Incorrect    Correct
+826  Incorrect  Incorrect
 
 [827 rows x 2 columns]
-Precision: 0.7575 | Recall: 0.7403 | F1: 0.7477 | WQK: 0.4960
+Precision: 0.7392 | Recall: 0.7479 | F1: 0.7432 | WQK: 0.4866 
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.86      0.83      0.84       583
+           1       0.62      0.66      0.64       244
+
+    accuracy                           0.78       827
+   macro avg       0.74      0.75      0.74       827
+weighted avg       0.79      0.78      0.78       827
+

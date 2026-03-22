@@ -1,0 +1,40 @@
+2026-03-22 17:25:38,155 [INFO] Running async evaluator with batching
+2026-03-22 17:25:41,849 [INFO] Finished batch 1/14 — 60/827 prompts
+2026-03-22 17:25:43,813 [INFO] Finished batch 2/14 — 120/827 prompts
+2026-03-22 17:25:45,444 [INFO] Finished batch 3/14 — 180/827 prompts
+2026-03-22 17:26:18,222 [INFO] Finished batch 4/14 — 240/827 prompts
+2026-03-22 17:26:19,898 [INFO] Finished batch 5/14 — 300/827 prompts
+2026-03-22 17:26:21,930 [INFO] Finished batch 6/14 — 360/827 prompts
+2026-03-22 17:26:23,662 [INFO] Finished batch 7/14 — 420/827 prompts
+2026-03-22 17:26:25,414 [INFO] Finished batch 8/14 — 480/827 prompts
+2026-03-22 17:26:26,883 [INFO] Finished batch 9/14 — 540/827 prompts
+2026-03-22 17:26:29,070 [INFO] Finished batch 10/14 — 600/827 prompts
+2026-03-22 17:26:30,886 [INFO] Finished batch 11/14 — 660/827 prompts
+2026-03-22 17:26:32,682 [INFO] Finished batch 12/14 — 720/827 prompts
+2026-03-22 17:26:34,247 [INFO] Finished batch 13/14 — 780/827 prompts
+2026-03-22 17:26:35,805 [INFO] Finished batch 14/14 — 827/827 prompts
+         score pred_score
+0    Incorrect    Correct
+1      Correct    Correct
+2      Correct    Correct
+3    Incorrect  Incorrect
+4      Correct    Correct
+..         ...        ...
+822    Correct    Correct
+823    Correct    Correct
+824  Incorrect  Incorrect
+825  Incorrect    Correct
+826  Incorrect  Incorrect
+
+[827 rows x 2 columns]
+Precision: 0.7401 | Recall: 0.7756 | F1: 0.7484 | WQK: 0.5022 
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.89      0.77      0.83       583
+           1       0.59      0.78      0.67       244
+
+    accuracy                           0.77       827
+   macro avg       0.74      0.78      0.75       827
+weighted avg       0.80      0.77      0.78       827
+

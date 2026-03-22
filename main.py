@@ -203,6 +203,6 @@ if __name__ == '__main__':
         f"Precision: {metrics['precision']:.4f} | "
         f"Recall: {metrics['recall']:.4f} | "
         f"F1: {metrics['f1']:.4f} | "
-        f"WQK: {metrics['wqk']:.4f}"
+        f"WQK: {metrics['wqk']:.4f} \n"
         f"Classification Report:\n{metrics['report']}"
     )
