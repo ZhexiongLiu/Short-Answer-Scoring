@@ -5,7 +5,7 @@ import os
 import yaml
 from openai import AsyncAzureOpenAI
 from openai.types.chat import ChatCompletionSystemMessageParam, ChatCompletionUserMessageParam
-from sklearn.metrics import cohen_kappa_score, f1_score, precision_score, recall_score
+from sklearn.metrics import cohen_kappa_score, f1_score, precision_score, recall_score, classification_report
 from utilities import get_json_data
 
 
@@ -27,11 +27,13 @@ def evaluate_with_sklearn(score, pred_score):
     recall = recall_score(score, pred_score, average="macro", zero_division=0)
     f1 = f1_score(score, pred_score, average="macro", zero_division=0)
     wqk = cohen_kappa_score(score, pred_score, weights="quadratic")
+    report = classification_report(score, pred_score, zero_division=0)
     return {
         "precision": precision,
         "recall": recall,
         "f1": f1,
         "wqk": wqk,
+        "report": report
     }
 
 
@@ -60,8 +62,12 @@ class BatchGeneration:
         with open(prompt_file, "r", encoding="utf-8") as reader:
             self.prompt_template = reader.read()
 
-    def build_prompt(self, question: str, rubric: str, answer: str):
-        return self.prompt_template.format(question=question, rubric=rubric, answer=answer)
+    def build_prompt(self, question, rubric, answer):
+        return self.prompt_template.format(question=question,
+                                           correct_rubric=rubric["correct_rubric"],
+                                           partial_correct_rubric=rubric["partial_correct_rubric"],
+                                           incorrect_rubric=rubric["incorrect_rubric"],
+                                           answer=answer)
 
     async def _one_completion(self, prompt: str, sem: asyncio.Semaphore):
 
@@ -169,7 +175,16 @@ if __name__ == '__main__':
 
     questions = df_trial["question"].tolist()
     answers = df_trial["answer"].tolist()
-    rubrics = df_trial["rubric"].tolist()
+    rubrics_raw = df_trial["rubric"].tolist()
+    rubrics =[]
+    for i in range(len(rubrics_raw)):
+        correct_rubric = rubrics_raw[i]["Correct"]
+        incorrect_rubric = rubrics_raw[i]["Incorrect"][0]
+        partial_correct_rubric = rubrics_raw[i]["Incorrect"][1]
+        combined_rubric = {"correct_rubric": correct_rubric,
+                           "partial_correct_rubric": partial_correct_rubric,
+                           "incorrect_rubric": incorrect_rubric}
+        rubrics.append(combined_rubric)
     gold_scores = df_trial["score"].tolist()
 
     evaluator = BatchGeneration(args)
@@ -189,4 +204,5 @@ if __name__ == '__main__':
         f"Recall: {metrics['recall']:.4f} | "
         f"F1: {metrics['f1']:.4f} | "
         f"WQK: {metrics['wqk']:.4f}"
+        f"Classification Report:\n{metrics['report']}"
     )

@@ -7,11 +7,11 @@ BATCH_SIZE=60
 MAX_CONCURRENT=120
 PROMPT_TEMPLATE="baseline"
 
-for MODEL in "gpt-4.1" "gpt-5.2"
+for MODEL in "gpt-4.1" #"gpt-5.2"
 do
     for DATASET in "2way" # "3way"
     do
-        for PROMPT_TEMPLATE in  "rationale" # "baseline"
+        for PROMPT_TEMPLATE in  "rationale" "baseline"
         do
 
           OUTPUT_PATH="experiments/${MODEL}_${DATASET}_${PROMPT_TEMPLATE}"

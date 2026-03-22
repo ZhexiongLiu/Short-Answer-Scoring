@@ -1,8 +1,15 @@
-### You will be given a question, a rubric, and a student's answer in German. You will evaluate the student's answer based on the specific rubric. You need to respond [Correct, Incorrect].You need to provide a brief rationale to justify your evaluation. Your rationale should be directly referencing the criteria outlined in the rubric to support your evaluation.
+### You will be given a question, a rubric, and a student's answer in German. You will evaluate the student's answer based on the specific rubric. You need to answer [Correct, Incorrect].
+### Question: 
+    {question}
+### Evaluation Rubric:
+    check one of the three rubric below, which is the most suitable for the student answer:
+        - if the student answer mentions all the component in {partial_correct_rubric}:
+            You need to answer Incorrect
+        - if the student answer mentions all the component in {incorrect_rubric}:
+            You need to answer Incorrect
+        - if the student answer mentions all the component in {correct_rubric}:
+            You need to answer Correct
+### Student Answer: 
+    {answer}
 
-### Question: {question}
-### Evaluation Rubric: {rubric}
-### Student Answer: {answer}
-### Response: 
-
-### Rationale:
+### Response:

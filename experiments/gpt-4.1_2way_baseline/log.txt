@@ -1,22 +1,24 @@
-2026-03-21 21:39:28,591 [INFO] Running async evaluator with batching
-2026-03-21 21:39:30,483 [INFO] Finished batch 1/14 — 60/827 prompts
-2026-03-21 21:39:32,263 [INFO] Finished batch 2/14 — 120/827 prompts
-2026-03-21 21:39:34,507 [INFO] Finished batch 3/14 — 180/827 prompts
-2026-03-21 21:39:36,565 [INFO] Finished batch 4/14 — 240/827 prompts
-2026-03-21 21:39:38,275 [INFO] Finished batch 5/14 — 300/827 prompts
-2026-03-21 21:39:40,075 [INFO] Finished batch 6/14 — 360/827 prompts
-2026-03-21 21:39:41,674 [INFO] Finished batch 7/14 — 420/827 prompts
-2026-03-21 21:39:43,391 [INFO] Finished batch 8/14 — 480/827 prompts
-2026-03-21 21:39:45,048 [INFO] Finished batch 9/14 — 540/827 prompts
-2026-03-21 21:39:46,959 [INFO] Finished batch 10/14 — 600/827 prompts
-2026-03-21 21:39:48,456 [INFO] Finished batch 11/14 — 660/827 prompts
-2026-03-21 21:39:53,762 [INFO] Finished batch 12/14 — 720/827 prompts
-2026-03-21 21:39:55,817 [INFO] Finished batch 13/14 — 780/827 prompts
-2026-03-21 21:39:58,198 [INFO] Finished batch 14/14 — 827/827 prompts
+2026-03-22 17:10:35,640 [INFO] Running async evaluator with batching
+2026-03-22 17:10:38,231 [INFO] Finished batch 1/14 — 60/827 prompts
+2026-03-22 17:10:40,079 [INFO] Finished batch 2/14 — 120/827 prompts
+2026-03-22 17:10:41,758 [INFO] Finished batch 3/14 — 180/827 prompts
+2026-03-22 17:10:44,011 [INFO] Finished batch 4/14 — 240/827 prompts
+2026-03-22 17:10:45,696 [INFO] Finished batch 5/14 — 300/827 prompts
+2026-03-22 17:10:47,527 [INFO] Finished batch 6/14 — 360/827 prompts
+2026-03-22 17:10:50,390 [INFO] Finished batch 7/14 — 420/827 prompts
+2026-03-22 17:10:52,130 [INFO] Finished batch 8/14 — 480/827 prompts
+2026-03-22 17:10:53,639 [INFO] Finished batch 9/14 — 540/827 prompts
+2026-03-22 17:10:55,613 [INFO] Finished batch 10/14 — 600/827 prompts
+2026-03-22 17:10:56,148 [INFO] OpenAI request failed: Error code: 400 - {'error': {'message': "The response was filtered due to the prompt triggering Azure OpenAI's content management policy. Please modify your prompt and retry. To learn more about our content filtering policies please read our documentation: https://go.microsoft.com/fwlink/?linkid=2198766", 'type': None, 'param': 'prompt', 'code': 'content_filter', 'status': 400, 'innererror': {'code': 'ResponsibleAIPolicyViolation', 'content_filter_result': {'hate': {'filtered': False, 'severity': 'safe'}, 'self_harm': {'filtered': False, 'severity': 'safe'}, 'sexual': {'filtered': True, 'severity': 'medium'}, 'violence': {'filtered': False, 'severity': 'safe'}}}}}
+2026-03-22 17:10:57,136 [INFO] Finished batch 11/14 — 660/827 prompts
+2026-03-22 17:10:59,503 [INFO] Finished batch 12/14 — 720/827 prompts
+2026-03-22 17:11:01,346 [INFO] Finished batch 13/14 — 780/827 prompts
+2026-03-22 17:11:02,957 [INFO] Finished batch 14/14 — 827/827 prompts
+2026-03-22 17:11:02,977 [INFO] Unrecognized score format: 0
          score pred_score
 0    Incorrect    Correct
-1      Correct    Correct
-2      Correct    Correct
+1      Correct  Incorrect
+2      Correct  Incorrect
 3    Incorrect  Incorrect
 4      Correct    Correct
 ..         ...        ...
@@ -27,4 +29,13 @@
 826  Incorrect  Incorrect
 
 [827 rows x 2 columns]
-Precision: 0.7621 | Recall: 0.7557 | F1: 0.7587 | WQK: 0.5175
+Precision: 0.7677 | Recall: 0.7286 | F1: 0.7427 | WQK: 0.4880Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.83      0.90      0.86       583
+           1       0.71      0.55      0.62       244
+
+    accuracy                           0.80       827
+   macro avg       0.77      0.73      0.74       827
+weighted avg       0.79      0.80      0.79       827
+
