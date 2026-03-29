@@ -42,7 +42,7 @@ class BatchGeneration:
 
         self.args = args
 
-        with open("config.yml", "r") as f:
+        with open("config.yaml", "r") as f:
             config = yaml.safe_load(f)
         api_key = config["openai_api_key"]
 
