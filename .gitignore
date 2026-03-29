@@ -209,5 +209,5 @@ __marimo__/
 # Local IDE and OS files
 .DS_Store
 .idea/
-config.yml
+config.yaml
 README.md
